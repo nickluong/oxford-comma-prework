@@ -4,10 +4,11 @@ def oxford_comma(array)
   elsif(array.size == 2)
     array.join(" and ")
   else 
-    count = array.size
-    until count == 1 
-      str << ""
+    count = 0
+    until count == array.size - 1  
+      str << "#{array[count]}, "
+      count += 1 
     end 
-    str << "and #{array[0]}"
+    str << "and #{array[count]}"
   end 
 end
